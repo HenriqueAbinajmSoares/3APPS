@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
         android:layout_marginEnd="1dp"
+        android:onClick="btnAPP1OnClick"
         android:text="@string/btnAPP1"
         app:layout_constraintBaseline_toBaselineOf="@+id/btnAPP2"
         app:layout_constraintEnd_toStartOf="@+id/btnAPP2"
