@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">3APPS</string>
-    <string name="btnAPP1"></string>
-    <string name="btnAPP2"></string>
-    <string name="btnAPP3"></string>
+    <string name="btnAPP1">URL</string>
+    <string name="btnAPP2">TELEFONE</string>
+    <string name="btnAPP3">EMAIL</string>
+    <string name="txtURL">Digite aqui sua URL</string>
+    <string name="btnURL">Pesquisar</string>
+    <string name="txtTEL">Digite aqui um número de telefone</string>
+    <string name="btnTEL">Ligar</string>
+    <string name="txtEMAIL">Digite aqui um endereço de Email</string>
+    <string name="btnEMAIL">Enviar</string>
 </resources>

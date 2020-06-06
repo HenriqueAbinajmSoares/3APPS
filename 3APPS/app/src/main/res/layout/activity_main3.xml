@@ -6,4 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".Main3Activity">
 
+    <EditText
+        android:id="@+id/txtTEL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="319dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/txtTEL"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnTEL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="49dp"
+        android:text="@string/btnTEL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTEL" />
 </androidx.constraintlayout.widget.ConstraintLayout>

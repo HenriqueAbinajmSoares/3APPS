@@ -6,4 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".Main4Activity">
 
+    <EditText
+        android:id="@+id/txtEMAIL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="274dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/txtEMAIL"
+        android:inputType="text|textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnEMAIL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/btnEMAIL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEMAIL" />
 </androidx.constraintlayout.widget.ConstraintLayout>
