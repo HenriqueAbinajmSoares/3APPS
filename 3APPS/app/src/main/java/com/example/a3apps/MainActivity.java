@@ -28,4 +28,14 @@ public class MainActivity extends AppCompatActivity {
         Intent intentAPP3 = new Intent(MainActivity.this, Main4Activity.class);
         startActivity(intentAPP3);
     }
+
+    public void btnAPP4OnClick(View view) {
+        Intent intentAPP4 = new Intent(MainActivity.this, Main5Activity.class);
+        startActivity(intentAPP4);
+    }
+
+    public void btnAPP5OnClick(View view) {
+        Intent intentAPP5 = new Intent(MainActivity.this, Main6Activity.class);
+        startActivity(intentAPP5);
+    }
 }

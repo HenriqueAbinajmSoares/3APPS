@@ -10,33 +10,55 @@
         android:id="@+id/btnAPP1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:layout_marginEnd="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="15dp"
         android:onClick="btnAPP1OnClick"
         android:text="@string/btnAPP1"
         app:layout_constraintBaseline_toBaselineOf="@+id/btnAPP2"
         app:layout_constraintEnd_toStartOf="@+id/btnAPP2"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnAPP2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="328dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="24dp"
         android:onClick="btnAPP2OnClick"
         android:text="@string/btnAPP2"
         app:layout_constraintEnd_toStartOf="@+id/btnAPP3"
         app:layout_constraintStart_toEndOf="@+id/btnAPP1"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btnAPP5" />
 
     <Button
         android:id="@+id/btnAPP3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
         android:onClick="btnAPP3OnClick"
         android:text="@string/btnAPP3"
         app:layout_constraintBaseline_toBaselineOf="@+id/btnAPP2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnAPP2" />
+
+    <Button
+        android:id="@+id/btnAPP4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="22dp"
+        android:onClick="btnAPP4OnClick"
+        android:text="@string/btnAPP4"
+        app:layout_constraintStart_toStartOf="@+id/btnAPP1"
+        app:layout_constraintTop_toBottomOf="@+id/btnAPP3" />
+
+    <Button
+        android:id="@+id/btnAPP5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="190dp"
+        android:onClick="btnAPP5OnClick"
+        android:text="@string/btnAPP5"
+        app:layout_constraintStart_toEndOf="@+id/btnAPP1"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
