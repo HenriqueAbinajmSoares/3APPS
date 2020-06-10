@@ -11,6 +11,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="201dp"
+        android:backgroundTint="#9C27B0"
+        android:drawableTint="#9C27B0"
+        android:onClick="btnCAMERAOnClick"
         android:text="@string/btnCAMERA"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="14dp"
         android:layout_marginTop="21dp"
-        android:onClick="btnCAMERAOnClick"
+        android:onClick="btnGALERIAOnClick"
         android:text="@string/btnGALERIA"
         app:layout_constraintStart_toStartOf="@+id/imgvFOTO"
         app:layout_constraintTop_toBottomOf="@+id/imgvFOTO" />

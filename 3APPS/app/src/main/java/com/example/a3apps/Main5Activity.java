@@ -16,6 +16,7 @@ import android.widget.Toast;
 import static android.media.MediaRecorder.VideoSource.CAMERA;
 
 public class Main5Activity extends AppCompatActivity {
+private static final int CAMERA = 1;
 private Uri uri;
 
     @Override
@@ -24,23 +25,25 @@ private Uri uri;
         setContentView(R.layout.activity_main5);
     }
 
-    public void btnCAMERA (View view){
-        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-            if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-                startActivityForResult(takePictureIntent, CAMERA);
+    public void btnCAMERAOnClick (View v){
+        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivityForResult(intent, CAMERA);
             }
     }
         protected void onActivityResult (int requestCode, int resultCode, Intent data) {
             super.onActivityResult(requestCode, requestCode, data);
-                if (requestCode == CAMERA && resultCode == RESULT_OK) {
-                    Bundle extras = data.getExtras();
-                    Bitmap imageBitmap = (Bitmap) extras.get("data");
-                    ImageView imgvFOTO = (ImageView) findViewById(R.id.imgvFOTO);
-                    imgvFOTO.setImageBitmap(imageBitmap);
-                    showMessage("Foto tirada!");
-                    addGaleria();
-                } else {
-                    showMessage("Foto não pode ser tirada!");
+                if (requestCode == CAMERA) {
+                    if (resultCode == RESULT_OK) {
+                        Bundle extras = data.getExtras();
+                        Bitmap imageBitmap = (Bitmap) extras.get("data");
+                        ImageView imgvFOTO = (ImageView) findViewById(R.id.imgvFOTO);
+                        imgvFOTO.setImageBitmap(imageBitmap);
+                        showMessage("Foto tirada!");
+                        addGaleria();
+                    } else {
+                        showMessage("Foto não pode ser tirada!");
+                    }
                 }
             }
 
@@ -51,12 +54,13 @@ private Uri uri;
         this.sendBroadcast(intentADD);
     }
 
-    private void showMessage(String s) {
-        Toast.makeText(this, s, Toast.LENGTH_LONG).show();
+    public void btnGALERIAOnClick (View v){
+        Intent intentGaleria = new Intent (Intent.ACTION_VIEW);
+        intentGaleria.setDataAndType(uri, "image/jpeg");
+        startActivity(intentGaleria);
     }
 
-    public void btnCAMERAOnClick(View view){
-        Intent intentGaleria = new Intent(this, MainActivity.class);
-        startActivity(intentGaleria);
+    private void showMessage(String s) {
+        Toast.makeText(this, s, Toast.LENGTH_LONG).show();
     }
 }

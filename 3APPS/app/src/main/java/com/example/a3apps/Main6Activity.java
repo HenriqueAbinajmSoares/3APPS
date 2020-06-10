@@ -36,7 +36,7 @@ private Uri uri;
         Toast.makeText(this, s, Toast.LENGTH_LONG).show();
     }
 
-    private void btnAbrirOnClick (View view){
+    public void btnABRIROnClick (View v){
         Intent intentGALERIA = new Intent (Intent.ACTION_PICK,
                 MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         startActivityForResult(intentGALERIA,1 );
